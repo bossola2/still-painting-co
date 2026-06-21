@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #C8B5AA;
+  --color-cream-dark: #B8A096;
+  --color-stone: #EDE6DF;
+  --color-stone-light: #F4EFEA;
+  --color-forest: #3B6E27;
+  --color-forest-dark: #2A4E1C;
+  --color-slate: #2A5C58;
+  --color-slate-light: #3D7872;
+  --color-barn: #8B2635;
+  --color-charcoal: #1C1A16;
+  --color-sage: #8FA67A;
+  --color-sage-light: #C8DDB5;
+  --font-display: var(--font-caveat);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #EDE6DF;
+  color: #1C1A16;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+}
+
+.wood-planks {
+  background-image:
+    /* plank seams — dark shadow + thin highlight edge for depth */
+    repeating-linear-gradient(
+      180deg,
+      transparent 0px,
+      transparent 52px,
+      rgba(0, 0, 0, 0.50) 52px,
+      rgba(0, 0, 0, 0.50) 55px,
+      rgba(255, 255, 255, 0.08) 55px,
+      rgba(255, 255, 255, 0.08) 56px,
+      transparent 56px
+    ),
+    /* horizontal wood grain within each plank */
+    repeating-linear-gradient(
+      177deg,
+      transparent 0px,
+      transparent 4px,
+      rgba(0, 0, 0, 0.09) 4px,
+      rgba(0, 0, 0, 0.09) 5px,
+      transparent 5px,
+      transparent 11px,
+      rgba(255, 255, 255, 0.04) 11px,
+      rgba(255, 255, 255, 0.04) 12px,
+      transparent 12px,
+      transparent 19px,
+      rgba(0, 0, 0, 0.07) 19px,
+      rgba(0, 0, 0, 0.08) 20.5px,
+      transparent 20.5px,
+      transparent 28px
+    );
+}
