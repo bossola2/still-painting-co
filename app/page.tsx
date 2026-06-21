@@ -40,10 +40,6 @@ const services = [
 
 
 
-const stats = [
-  { value: "100%", label: "Satisfaction" },
-  { value: "Local", label: "Burlington, VT" },
-];
 
 function ServiceIcon({ id }: { id: string }) {
   const p = {
@@ -338,14 +334,6 @@ export default function Home() {
                   job we do. When we leave your property, we want it to look
                   genuinely great — not just good enough.
                 </p>
-              </div>
-              <div className="mt-10 flex flex-wrap gap-4">
-                {stats.map((s) => (
-                  <div key={s.label} className="bg-stone/10 border border-stone/20 rounded-xl px-6 py-4 text-center">
-                    <p className="font-display text-4xl font-bold text-stone">{s.value}</p>
-                    <p className="text-sm text-stone/55 mt-1 uppercase tracking-wide">{s.label}</p>
-                  </div>
-                ))}
               </div>
             </div>
           </div>
