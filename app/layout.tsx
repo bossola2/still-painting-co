@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   description:
     "Local Burlington, VT exterior painters. Houses, decks, fences & staining. Free quotes. Hardworking college students who take pride in every coat.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/favicon.svg",
   },
 };
 
