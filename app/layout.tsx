@@ -19,9 +19,6 @@ export const metadata: Metadata = {
   title: "Still Painting Co.",
   description:
     "Local Burlington, VT interior and exterior painters. Houses, decks, fences & staining. Free quotes. Hardworking college students who take pride in every coat.",
-  icons: {
-    icon: "/favicon.svg",
-  },
 };
 
 export default function RootLayout({
