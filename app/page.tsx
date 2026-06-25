@@ -347,10 +347,15 @@ export default function Home() {
             What the Neighbors Say
           </h2>
           <div className="w-16 h-1.5 bg-forest rounded-full mx-auto mb-8" />
-          <div className="bg-white rounded-2xl p-10 shadow-md border-l-[6px] border-forest inline-block max-w-xl mx-auto">
+          <div className="bg-white rounded-2xl p-10 shadow-md border-l-[6px] border-forest inline-block max-w-xl mx-auto text-left">
             <span className="font-display text-7xl text-forest/15 leading-none block mb-2" aria-hidden="true">&ldquo;</span>
-            <p className="text-charcoal/70 text-xl italic mb-4">Reviews coming soon — we&apos;re just getting started!</p>
-            <p className="text-charcoal/45 text-sm">Be one of our first customers and leave us a review.</p>
+            <p className="text-charcoal/80 text-lg leading-relaxed mb-6">
+              Highly recommend! They painted our front porch, power washed our back deck, and took care of several paint touch-ups around the house. They were responsive, professional, and easy to work with from start to finish. Communication was excellent, the work was completed quickly, and their pricing was much more affordable than other local options we considered. The finished results look great, and the whole process was smooth and stress-free. We wouldn&apos;t hesitate to hire them again.
+            </p>
+            <div className="border-t border-stone pt-4">
+              <p className="font-display font-bold text-forest-dark text-lg">Alison</p>
+              <p className="text-sm text-charcoal/50">Colchester, VT</p>
+            </div>
           </div>
         </div>
       </section>
