@@ -166,7 +166,7 @@ export default function Home() {
             </span>
           </h1>
           <p className="text-xl sm:text-2xl text-stone/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Two UVM students. Honest work. Fair prices. Serving the greater Burlington area.
+            UVM students. Honest work. Fair prices. Serving the greater Burlington area.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
