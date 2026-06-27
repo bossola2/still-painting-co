@@ -115,9 +115,12 @@ export default function Home() {
       {/* ── NAV ── */}
       <nav className="sticky top-0 z-50 bg-slate shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
-          <span className="font-display text-xl sm:text-2xl font-bold text-stone leading-tight">
-            Still Painting Co.
-          </span>
+          <div className="flex items-center gap-3">
+            <img src="/StillPaintingLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 rounded-lg object-cover" />
+            <span className="font-display text-xl sm:text-2xl font-bold text-stone leading-tight">
+              Still Painting Co.
+            </span>
+          </div>
           <div className="flex items-center gap-3">
             <a
               href={EMAIL_HREF}

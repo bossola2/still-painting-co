@@ -5,14 +5,14 @@
   --color-cream-dark: #B8A096;
   --color-stone: #EDE6DF;
   --color-stone-light: #F4EFEA;
-  --color-forest: #3B6E27;
-  --color-forest-dark: #2A4E1C;
-  --color-slate: #2A5C58;
-  --color-slate-light: #3D7872;
-  --color-barn: #8B2635;
-  --color-charcoal: #1C1A16;
-  --color-sage: #8FA67A;
-  --color-sage-light: #C8DDB5;
+  --color-forest: #2B4590;
+  --color-forest-dark: #1E3270;
+  --color-slate: #3A9E9B;
+  --color-slate-light: #5BB8B5;
+  --color-barn: #A07AC0;
+  --color-charcoal: #1C1A2E;
+  --color-sage: #E8B84B;
+  --color-sage-light: #F2D080;
   --font-display: var(--font-caveat);
 }
 
