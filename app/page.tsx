@@ -113,10 +113,10 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* ── NAV ── */}
-      <nav className="sticky top-0 z-50 bg-slate shadow-lg">
+      <nav className="sticky top-0 z-50 bg-pink shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/StillPaintingLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 rounded-lg object-cover" />
+            <img src="/StillPaintingRealLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 object-contain mix-blend-multiply" />
             <span className="font-display text-xl sm:text-2xl font-bold text-stone leading-tight">
               Still Painting Co.
             </span>
@@ -174,7 +174,7 @@ export default function Home() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <a
               href="#quote"
-              className="w-full sm:w-auto bg-stone text-forest-dark font-bold text-xl px-10 py-4 rounded-full transition-all min-h-[56px] flex items-center justify-center gap-3 shadow-xl hover:bg-stone-light hover:shadow-2xl hover:-translate-y-0.5"
+              className="w-full sm:w-auto bg-pink text-white font-bold text-xl px-10 py-4 rounded-full transition-all min-h-[56px] flex items-center justify-center gap-3 shadow-xl hover:opacity-90 hover:shadow-2xl hover:-translate-y-0.5"
             >
               Get a Free Quote
             </a>
@@ -350,7 +350,7 @@ export default function Home() {
             What the Neighbors Say
           </h2>
           <div className="w-16 h-1.5 bg-forest rounded-full mx-auto mb-8" />
-          <div className="bg-white rounded-2xl p-10 shadow-md border-l-[6px] border-forest inline-block max-w-xl mx-auto text-left">
+          <div className="bg-white rounded-2xl p-10 shadow-md border-l-[6px] border-pink inline-block max-w-xl mx-auto text-left">
             <span className="font-display text-7xl text-forest/15 leading-none block mb-2" aria-hidden="true">&ldquo;</span>
             <p className="text-charcoal/80 text-lg leading-relaxed mb-6">
               Highly recommend! They painted our front porch, power washed our back deck, and took care of several paint touch-ups around the house. They were responsive, professional, and easy to work with from start to finish. Communication was excellent, the work was completed quickly, and their pricing was much more affordable than other local options we considered. The finished results look great, and the whole process was smooth and stress-free. We wouldn&apos;t hesitate to hire them again.
