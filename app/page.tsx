@@ -116,7 +116,7 @@ export default function Home() {
       <nav className="sticky top-0 z-50 bg-pink shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img src="/StillPaintingRealLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 object-contain mix-blend-multiply" />
+            <img src="/StillPaintingRealLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 object-contain rounded-lg" />
             <span className="font-display text-xl sm:text-2xl font-bold text-stone leading-tight">
               Still Painting Co.
             </span>
