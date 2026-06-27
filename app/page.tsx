@@ -199,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-stone-light" id="services">
+      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-stone" id="services">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-14">
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-slate mb-3">
