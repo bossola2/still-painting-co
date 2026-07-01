@@ -25,13 +25,13 @@ export default function NavMenu() {
       </button>
 
       {open && (
-        <div className="absolute right-0 top-12 bg-white rounded-2xl shadow-xl border border-stone/20 py-2 w-52 z-50">
+        <div className="absolute right-0 top-12 bg-forest rounded-2xl shadow-xl py-2 w-52 z-50">
           {links.map((l) => (
             <a
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="block px-5 py-3 text-forest-dark font-semibold hover:bg-stone/30 transition-colors"
+              className="block px-5 py-3 text-stone font-semibold hover:bg-forest-dark transition-colors"
             >
               {l.label}
             </a>
