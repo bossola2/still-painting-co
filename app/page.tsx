@@ -431,7 +431,7 @@ export default function Home() {
               </div>
             </div>
             <div className="order-1 lg:order-2">
-              <p className="text-slate font-semibold uppercase tracking-widest text-sm mb-4">About Us</p>
+              <p className="text-slate font-semibold uppercase tracking-widest text-sm mb-4">Who We Are</p>
               <h2 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-2 text-forest-dark">
                 About Us
               </h2>
