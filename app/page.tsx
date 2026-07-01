@@ -209,30 +209,13 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
-        {/* Paint splatter left */}
-        <svg className="absolute bottom-16 left-6 w-48 h-48 pointer-events-none opacity-15 text-slate-light" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true">
-          <ellipse cx="60" cy="60" rx="22" ry="18"/>
-          <ellipse cx="28" cy="45" rx="8" ry="6"/>
-          <ellipse cx="88" cy="35" rx="6" ry="5"/>
-          <ellipse cx="35" cy="82" rx="10" ry="7"/>
-          <ellipse cx="85" cy="78" rx="7" ry="5"/>
-          <ellipse cx="95" cy="55" rx="5" ry="4"/>
-          <ellipse cx="18" cy="65" rx="5" ry="4"/>
-          <ellipse cx="62" cy="22" rx="6" ry="5"/>
-          <ellipse cx="42" cy="28" rx="4" ry="3"/>
-          <ellipse cx="78" cy="95" rx="4" ry="3"/>
+        {/* Paint stroke top right */}
+        <svg className="absolute top-8 right-0 w-40 sm:w-80 h-12 sm:h-16 text-slate-light/20 pointer-events-none" viewBox="0 0 400 80" fill="currentColor" aria-hidden="true">
+          <path d="M8,40 Q80,12 180,28 Q280,44 392,18 C398,26 398,38 392,48 Q280,70 180,54 Q80,70 8,40Z"/>
         </svg>
-
-        {/* Paint splatter right */}
-        <svg className="absolute top-16 right-8 w-36 h-36 pointer-events-none opacity-15 text-slate-light" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true">
-          <ellipse cx="60" cy="60" rx="18" ry="15"/>
-          <ellipse cx="32" cy="48" rx="7" ry="5"/>
-          <ellipse cx="85" cy="38" rx="5" ry="4"/>
-          <ellipse cx="38" cy="80" rx="8" ry="6"/>
-          <ellipse cx="82" cy="76" rx="6" ry="4"/>
-          <ellipse cx="92" cy="58" rx="4" ry="3"/>
-          <ellipse cx="20" cy="70" rx="4" ry="3"/>
-          <ellipse cx="65" cy="25" rx="5" ry="4"/>
+        {/* Paint stroke bottom left */}
+        <svg className="absolute bottom-20 left-0 w-36 sm:w-72 h-10 sm:h-14 text-slate-light/20 pointer-events-none" viewBox="0 0 360 60" fill="currentColor" aria-hidden="true">
+          <path d="M6,30 Q70,8 180,22 Q280,36 354,12 C358,20 358,32 354,42 Q280,56 180,42 Q70,56 6,30Z"/>
         </svg>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-16 sm:py-40 text-center">
