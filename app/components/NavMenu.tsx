@@ -6,9 +6,11 @@ export default function NavMenu() {
 
   const links = [
     { label: "Services", href: "#services" },
+    { label: "Our Process", href: "#process" },
     { label: "Before & After", href: "#gallery" },
     { label: "About Us", href: "#about" },
     { label: "Reviews", href: "#testimonials" },
+    { label: "FAQ", href: "#faq" },
     { label: "Get a Quote", href: "#quote" },
   ];
 
