@@ -210,7 +210,7 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
         {/* Paint stroke top right */}
-        <svg className="absolute top-8 right-0 w-40 sm:w-80 h-12 sm:h-16 text-slate-light/20 pointer-events-none" viewBox="0 0 400 80" fill="currentColor" aria-hidden="true">
+        <svg className="absolute top-8 right-0 w-40 sm:w-80 h-12 sm:h-16 text-slate-light/25 pointer-events-none" viewBox="0 0 400 80" fill="currentColor" aria-hidden="true">
           <path d="M8,40 Q80,12 180,28 Q280,44 392,18 C398,26 398,38 392,48 Q280,70 180,54 Q80,70 8,40Z"/>
         </svg>
         {/* Paint stroke bottom left */}
