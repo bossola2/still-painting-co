@@ -1,8 +1,8 @@
 import QuoteForm from "./components/QuoteForm";
 import NavMenu from "./components/NavMenu";
 
-const PHONE = "(804) 928-7714";
-const PHONE_HREF = "tel:+18049287714";
+const PHONE = "(412) 877-5545";
+const PHONE_HREF = "tel:+14128775545";
 const EMAIL = "stillpaintingco@gmail.com";
 const EMAIL_HREF = "mailto:stillpaintingco@gmail.com";
 
@@ -39,8 +39,40 @@ const services = [
   },
 ];
 
+const values = [
+  {
+    title: "No Shortcuts",
+    desc: "We prep every surface, tape every edge, and use quality materials. The extra time it takes is the difference between a job that lasts and one that doesn't.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+      </svg>
+    ),
+  },
+  {
+    title: "We Show Up",
+    desc: "On time, every time. We communicate clearly, stick to our schedule, and treat your property with respect from start to finish.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+  {
+    title: "Fair Pricing, Always",
+    desc: "You'll get a straight quote upfront with no hidden fees. We'd rather earn your trust than squeeze an extra dollar out of a job.",
+    icon: (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+  },
+];
 
-
+const serviceAreas = [
+  "Burlington", "Colchester", "South Burlington", "Shelburne",
+  "Winooski", "Essex", "Williston", "Milton", "Hinesburg", "Charlotte",
+];
 
 function ServiceIcon({ id }: { id: string }) {
   const p = {
@@ -113,6 +145,15 @@ function ServiceIcon({ id }: { id: string }) {
 export default function Home() {
   return (
     <div className="min-h-screen">
+
+      {/* ── TOP BAR ── */}
+      <div className="bg-forest-dark text-stone/80 text-sm py-2 px-4 sm:px-8">
+        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
+          <p className="font-semibold">Burlington, VT &amp; Surrounding Areas · Licensed &amp; Insured</p>
+          <a href={PHONE_HREF} className="font-bold text-stone hover:text-cream transition-colors">{PHONE}</a>
+        </div>
+      </div>
+
       {/* ── NAV ── */}
       <nav className="sticky top-0 z-50 bg-pink shadow-lg">
         <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
@@ -122,18 +163,12 @@ export default function Home() {
               Still Painting Co.
             </span>
           </div>
-          <div className="flex items-center gap-3">
-            <span className="hidden sm:inline-flex items-center gap-1.5 bg-stone/10 border border-stone/20 text-stone text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
-              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-2.207-.596-4.277-1.642-6.022" />
+          <div className="flex items-center gap-4">
+            <a href={PHONE_HREF} className="hidden sm:inline-flex items-center gap-2 text-stone font-bold text-lg hover:text-cream transition-colors">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
-              Licensed &amp; Insured
-            </span>
-            <a
-              href={EMAIL_HREF}
-              className="hidden sm:inline-flex items-center text-stone/70 font-semibold text-base hover:text-stone transition-colors"
-            >
-              {EMAIL}
+              {PHONE}
             </a>
             <NavMenu />
           </div>
@@ -142,8 +177,6 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
-
-        {/* horizontal paint-stroke decorations */}
         <svg className="absolute top-12 right-[-1rem] w-80 h-16 text-stone/10 pointer-events-none" viewBox="0 0 400 80" fill="currentColor" aria-hidden="true">
           <path d="M8,40 Q80,12 180,28 Q280,44 392,18 C398,26 398,38 392,48 Q280,70 180,54 Q80,70 8,40Z"/>
         </svg>
@@ -187,13 +220,13 @@ export default function Home() {
               Get a Free Quote
             </a>
             <a
-              href={EMAIL_HREF}
+              href={PHONE_HREF}
               className="w-full sm:w-auto border-2 border-stone/40 text-stone hover:border-stone hover:bg-stone/10 font-semibold text-lg px-8 py-4 rounded-full transition-colors min-h-[56px] flex items-center justify-center gap-2"
             >
               <svg className="w-4 h-4 shrink-0 opacity-70" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>
-              Email Us
+              Call Us
             </a>
           </div>
         </div>
@@ -201,8 +234,27 @@ export default function Home() {
         {/* wave divider */}
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden leading-none">
           <svg viewBox="0 0 1440 64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" className="block w-full h-10 sm:h-16">
-            <path d="M0,64 C480,0 960,0 1440,64 L1440,64 L0,64 Z" fill="#EDE6DF" />
+            <path d="M0,64 C480,0 960,0 1440,64 L1440,64 L0,64 Z" fill="#E8DDD5" />
           </svg>
+        </div>
+      </section>
+
+      {/* ── TRUST BAR ── */}
+      <section className="bg-stone py-5 px-4 sm:px-8 border-b border-cream">
+        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6 sm:gap-12">
+          {[
+            { label: "Licensed & Insured" },
+            { label: "Free Estimates" },
+            { label: "Local & Reliable" },
+            { label: "Satisfaction Guaranteed" },
+          ].map((item) => (
+            <div key={item.label} className="flex items-center gap-2 text-forest-dark font-bold text-sm sm:text-base">
+              <svg className="w-5 h-5 text-slate shrink-0" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              {item.label}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -215,8 +267,7 @@ export default function Home() {
             </h2>
             <div className="w-16 h-1.5 bg-slate rounded-full mx-auto mb-5" />
             <p className="text-lg sm:text-xl text-charcoal/70 max-w-xl mx-auto">
-              From full house exteriors to backyard fences — we handle it all with care
-              and attention to detail.
+              From full house exteriors to backyard fences — we handle it all with care and attention to detail.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -229,11 +280,32 @@ export default function Home() {
                   <ServiceIcon id={s.icon} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-slate mb-1 tracking-tight">
-                    {s.title}
-                  </h3>
+                  <h3 className="text-lg font-bold text-slate mb-1 tracking-tight">{s.title}</h3>
                   <p className="text-charcoal/65 leading-relaxed text-base">{s.desc}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VALUES ── */}
+      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-forest-dark text-cream">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-14">
+            <h2 className="font-display text-4xl sm:text-5xl font-bold text-stone mb-3">
+              The Way We Work
+            </h2>
+            <div className="w-16 h-1.5 bg-slate rounded-full mx-auto mb-5" />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {values.map((v) => (
+              <div key={v.title} className="bg-forest rounded-2xl p-8 text-center flex flex-col items-center gap-4">
+                <div className="w-16 h-16 rounded-full bg-slate/20 text-slate-light flex items-center justify-center">
+                  {v.icon}
+                </div>
+                <h3 className="font-display text-2xl font-bold text-stone">{v.title}</h3>
+                <p className="text-cream/70 leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -248,15 +320,10 @@ export default function Home() {
               Before &amp; After
             </h2>
             <div className="w-16 h-1.5 bg-stone/50 rounded-full mx-auto mb-5" />
-            <p className="text-lg sm:text-xl text-stone/70">
-              See what a fresh coat can do.
-            </p>
+            <p className="text-lg sm:text-xl text-stone/70">See what a fresh coat can do.</p>
           </div>
-          {/* Featured project — all 4 photos */}
           <div className="rounded-2xl overflow-hidden shadow-lg bg-stone mb-8">
-            {/* Mobile: Before stack then After stack. Desktop: side by side */}
             <div className="grid grid-cols-1 sm:grid-cols-2">
-              {/* Before column */}
               <div className="sm:border-r-2 border-b-2 sm:border-b-0 border-stone">
                 <div className="relative h-52 sm:h-56 overflow-hidden border-b-2 border-stone">
                   <img src="/porch1before.JPEG" alt="Before: Porch Refinish" className="w-full h-full object-contain object-center bg-charcoal/10" />
@@ -268,7 +335,6 @@ export default function Home() {
                   <span className="text-stone-light text-sm font-bold tracking-wide uppercase">Before</span>
                 </div>
               </div>
-              {/* After column */}
               <div>
                 <div className="relative h-52 sm:h-56 overflow-hidden border-b-2 border-stone">
                   <img src="/porch1after.jpeg" alt="After: Porch Refinish" className="w-full h-full object-cover" />
@@ -286,12 +352,9 @@ export default function Home() {
                 <p className="font-display font-semibold text-forest-dark text-xl">Porch Refinish</p>
                 <p className="text-sm text-charcoal/55">Colchester, VT</p>
               </div>
-              <span className="bg-forest text-stone-light text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
-                Featured
-              </span>
+              <span className="bg-forest text-stone-light text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Featured</span>
             </div>
           </div>
-
           <p className="text-center text-stone/60 mt-8 text-base italic">
             More photos added after every job — check back soon!
           </p>
@@ -299,12 +362,11 @@ export default function Home() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-forest-dark text-cream" id="about">
+      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-stone" id="about">
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Placeholder photo */}
             <div className="rounded-2xl overflow-hidden shadow-xl order-2 lg:order-1 border-2 border-stone/30">
-              <div className="h-72 sm:h-96 bg-stone flex flex-col items-center justify-center gap-4">
+              <div className="h-72 sm:h-96 bg-cream flex flex-col items-center justify-center gap-4">
                 <svg className="w-16 h-16 text-forest-dark/30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/>
                   <circle cx="12" cy="13" r="4"/>
@@ -315,17 +377,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Text */}
             <div className="order-1 lg:order-2">
-              <p className="text-slate-light font-semibold uppercase tracking-widest text-sm mb-4">
-                Why Choose Us
-              </p>
-              <h2 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-2">
+              <p className="text-slate font-semibold uppercase tracking-widest text-sm mb-4">About Us</p>
+              <h2 className="font-display text-5xl sm:text-6xl font-bold leading-tight mb-2 text-forest-dark">
                 About Us
               </h2>
               <div className="w-16 h-1.5 bg-slate rounded-full mb-6" />
-              <div className="space-y-4 text-cream/80 text-lg leading-relaxed">
+              <div className="space-y-4 text-charcoal/80 text-lg leading-relaxed">
                 <p>
                   We&apos;re two UVM students who fell into painting the way most
                   people do — a summer job that turned into something real. We spent
@@ -371,21 +429,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── SERVICE AREAS ── */}
+      <section className="py-20 sm:py-28 px-4 sm:px-8 bg-forest-dark text-cream">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="font-display text-4xl sm:text-5xl font-bold text-stone mb-3">
+            Areas We Serve
+          </h2>
+          <div className="w-16 h-1.5 bg-slate rounded-full mx-auto mb-5" />
+          <p className="text-lg text-stone/70 mb-10">Proudly serving the greater Burlington, VT area and beyond.</p>
+          <div className="flex flex-wrap justify-center gap-3">
+            {serviceAreas.map((area) => (
+              <span key={area} className="bg-forest text-stone font-semibold px-5 py-2.5 rounded-full text-base">
+                {area}, VT
+              </span>
+            ))}
+          </div>
+          <p className="text-stone/50 mt-8 text-sm">Don&apos;t see your town? Give us a call — we may still be able to help.</p>
+        </div>
+      </section>
+
       {/* ── QUOTE FORM ── */}
       <section className="py-20 sm:py-28 px-4 sm:px-8 bg-forest-dark" id="quote">
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-12">
-            <p className="text-slate-light font-semibold uppercase tracking-widest text-sm mb-4">
-              Free Estimate
-            </p>
+            <p className="text-slate-light font-semibold uppercase tracking-widest text-sm mb-4">Free Estimate</p>
             <h2 className="font-display text-4xl sm:text-5xl font-bold text-stone mb-3">
               Let&apos;s Get Started
             </h2>
             <div className="w-16 h-1.5 bg-slate rounded-full mx-auto mb-5" />
             <p className="text-lg sm:text-xl text-stone/70 mb-3">
-              Fill out the form below and we&apos;ll get back to you fast. Or email us directly at{" "}
-              <a href={EMAIL_HREF} className="text-slate-light underline underline-offset-2 hover:text-stone transition-colors">
-                {EMAIL}
+              Fill out the form below and we&apos;ll get back to you fast. Or call us at{" "}
+              <a href={PHONE_HREF} className="text-slate-light underline underline-offset-2 hover:text-stone transition-colors">
+                {PHONE}
               </a>
             </p>
           </div>
@@ -394,28 +469,44 @@ export default function Home() {
       </section>
 
       {/* ── FOOTER ── */}
-      <footer className="bg-forest-dark text-cream py-14 px-4 sm:px-8">
+      <footer className="bg-forest-dark text-cream py-14 px-4 sm:px-8 border-t border-forest">
         <div className="max-w-6xl mx-auto">
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mb-8">
-            <div className="text-center sm:text-left">
-              <p className="font-display text-2xl font-bold mb-1">Still Painting Co.</p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <img src="/StillPaintingRealLogo.png" alt="Still Painting Co." className="h-10 w-10 object-contain rounded-lg" />
+                <p className="font-display text-2xl font-bold">Still Painting Co.</p>
+              </div>
               <p className="text-cream/55 text-base">Burlington, Vermont</p>
+              <p className="text-cream/55 text-sm mt-1">Licensed &amp; Insured</p>
             </div>
-            <div className="text-center sm:text-right space-y-2">
-              <a
-                href={EMAIL_HREF}
-                className="flex items-center justify-center sm:justify-end gap-2 text-cream font-semibold text-xl hover:underline"
-              >
-                <svg className="w-5 h-5 shrink-0 opacity-70" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+            <div>
+              <p className="font-bold text-stone mb-3 uppercase tracking-wide text-sm">Contact</p>
+              <a href={PHONE_HREF} className="flex items-center gap-2 text-cream/80 hover:text-cream transition-colors mb-2">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+                </svg>
+                {PHONE}
+              </a>
+              <a href={EMAIL_HREF} className="flex items-center gap-2 text-cream/80 hover:text-cream transition-colors">
+                <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 {EMAIL}
               </a>
-              <p className="text-cream/40 text-sm">Mon – Sat, 8 am – 6 pm</p>
+              <p className="text-cream/40 text-sm mt-2">Mon – Sat, 8 am – 6 pm</p>
+            </div>
+            <div>
+              <p className="font-bold text-stone mb-3 uppercase tracking-wide text-sm">Service Areas</p>
+              <div className="flex flex-wrap gap-x-3 gap-y-1 text-cream/60 text-sm">
+                {serviceAreas.map((area) => (
+                  <span key={area}>{area}</span>
+                ))}
+              </div>
             </div>
           </div>
 
-          <div className="h-1 w-16 bg-cream rounded-full mx-auto sm:mx-0 mb-8 opacity-40" />
+          <div className="h-px bg-cream/10 mb-6" />
 
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-cream/35 text-sm">
             <p>© {new Date().getFullYear()} Still Painting Co. · Burlington, VT</p>
