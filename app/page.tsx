@@ -451,6 +451,7 @@ export default function Home() {
                   genuinely great — not just good enough.
                 </p>
               </div>
+              <p className="mt-6 font-display text-2xl font-bold text-slate">— Sam &amp; Jasper</p>
             </div>
           </div>
         </div>
