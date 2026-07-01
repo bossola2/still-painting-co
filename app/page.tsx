@@ -69,15 +69,15 @@ const faqs = [
   },
   {
     q: "What areas do you serve?",
-    a: "We serve Burlington and the greater surrounding area including Colchester, South Burlington, Shelburne, Winooski, Essex, Williston, and more. Not sure if we cover your town? Just give us a call.",
+    a: "We serve Burlington and the greater surrounding area including Colchester, South Burlington, Shelburne, Winooski, Essex, Williston, and more. Not sure if we cover your town? Shoot us a text and we'll let you know.",
   },
   {
     q: "How long does a typical job take?",
-    a: "It depends on the size of the project, but most exterior paint jobs take 2–4 days. We'll give you a realistic timeline upfront before we start.",
+    a: "A typical job — whether it's trimwork or a full porch — usually takes about a week, depending on the weather. We'll give you a realistic timeline before we start.",
   },
   {
     q: "What kind of paint do you use?",
-    a: "We use quality exterior and interior paints suited for Vermont's climate. We're happy to discuss brand and finish options with you during the estimate.",
+    a: "We're flexible and happy to use whatever you prefer. For exterior work we recommend Benjamin Moore Element Guard — it holds up great against Vermont winters. For interior jobs we recommend Benjamin Moore Regal. Both are premium paints that we stand behind.",
   },
   {
     q: "Do I need to do anything to prepare?",
@@ -488,7 +488,7 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="text-stone/50 mt-8 text-sm">Don&apos;t see your town? Give us a call — we may still be able to help.</p>
+          <p className="text-stone/50 mt-8 text-sm">Don&apos;t see your town? Shoot us a text — we may still be able to help.</p>
         </div>
       </section>
 
