@@ -123,6 +123,12 @@ export default function Home() {
             </span>
           </div>
           <div className="flex items-center gap-3">
+            <span className="hidden sm:inline-flex items-center gap-1.5 bg-stone/10 border border-stone/20 text-stone text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">
+              <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 12c0 6.627 5.373 12 12 12s12-5.373 12-12c0-2.207-.596-4.277-1.642-6.022" />
+              </svg>
+              Licensed &amp; Insured
+            </span>
             <a
               href={EMAIL_HREF}
               className="hidden sm:inline-flex items-center text-stone/70 font-semibold text-base hover:text-stone transition-colors"
