@@ -209,14 +209,30 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
-        {/* Paint drips */}
-        <svg className="absolute top-0 left-0 right-0 w-full pointer-events-none opacity-20" viewBox="0 0 1440 160" fill="currentColor" aria-hidden="true">
-          <path d="M100 0 L100 80 Q100 100 95 110 Q90 120 95 130 Q100 138 105 130 Q110 120 105 110 Q100 100 100 80 L115 0Z" className="text-slate-light"/>
-          <path d="M280 0 L280 55 Q280 70 275 78 Q270 86 275 94 Q280 100 285 94 Q290 86 285 78 Q280 70 280 55 L293 0Z" className="text-slate-light"/>
-          <path d="M520 0 L520 95 Q520 112 514 122 Q508 132 514 142 Q520 150 526 142 Q532 132 526 122 Q520 112 520 95 L535 0Z" className="text-slate-light"/>
-          <path d="M760 0 L760 65 Q760 80 755 88 Q750 96 755 104 Q760 110 765 104 Q770 96 765 88 Q760 80 760 65 L773 0Z" className="text-slate-light"/>
-          <path d="M1000 0 L1000 85 Q1000 102 994 112 Q988 122 994 130 Q1000 136 1006 130 Q1012 122 1006 112 Q1000 102 1000 85 L1014 0Z" className="text-slate-light"/>
-          <path d="M1260 0 L1260 50 Q1260 64 1255 72 Q1250 80 1255 88 Q1260 94 1265 88 Q1270 80 1265 72 Q1260 64 1260 50 L1272 0Z" className="text-slate-light"/>
+        {/* Paint splatter left */}
+        <svg className="absolute bottom-16 left-6 w-48 h-48 pointer-events-none opacity-15 text-slate-light" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true">
+          <ellipse cx="60" cy="60" rx="22" ry="18"/>
+          <ellipse cx="28" cy="45" rx="8" ry="6"/>
+          <ellipse cx="88" cy="35" rx="6" ry="5"/>
+          <ellipse cx="35" cy="82" rx="10" ry="7"/>
+          <ellipse cx="85" cy="78" rx="7" ry="5"/>
+          <ellipse cx="95" cy="55" rx="5" ry="4"/>
+          <ellipse cx="18" cy="65" rx="5" ry="4"/>
+          <ellipse cx="62" cy="22" rx="6" ry="5"/>
+          <ellipse cx="42" cy="28" rx="4" ry="3"/>
+          <ellipse cx="78" cy="95" rx="4" ry="3"/>
+        </svg>
+
+        {/* Paint splatter right */}
+        <svg className="absolute top-16 right-8 w-36 h-36 pointer-events-none opacity-15 text-slate-light" viewBox="0 0 120 120" fill="currentColor" aria-hidden="true">
+          <ellipse cx="60" cy="60" rx="18" ry="15"/>
+          <ellipse cx="32" cy="48" rx="7" ry="5"/>
+          <ellipse cx="85" cy="38" rx="5" ry="4"/>
+          <ellipse cx="38" cy="80" rx="8" ry="6"/>
+          <ellipse cx="82" cy="76" rx="6" ry="4"/>
+          <ellipse cx="92" cy="58" rx="4" ry="3"/>
+          <ellipse cx="20" cy="70" rx="4" ry="3"/>
+          <ellipse cx="65" cy="25" rx="5" ry="4"/>
         </svg>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-16 sm:py-40 text-center">
@@ -337,7 +353,7 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {process.map((p) => (
               <div key={p.step} className="bg-forest rounded-2xl p-8 flex flex-col gap-4">
-                <span className="font-display text-5xl font-bold text-pink">{p.step}</span>
+                <span className="font-display text-5xl font-bold text-stone-light">{p.step}</span>
                 <h3 className="font-display text-2xl font-bold text-stone">{p.title}</h3>
                 <p className="text-cream/70 leading-relaxed">{p.desc}</p>
               </div>
