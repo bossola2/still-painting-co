@@ -162,9 +162,9 @@ export default function Home() {
   return (
     <div className="min-h-screen">
 
-      {/* ── TOP BAR ── */}
-      <div className="bg-forest-dark text-stone/80 text-sm py-2 px-4 sm:px-8">
-        <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-1">
+      {/* ── TOP BAR — desktop only ── */}
+      <div className="hidden sm:block bg-forest-dark text-stone/80 text-sm py-2 px-8">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
           <p className="font-semibold">Burlington, VT &amp; Surrounding Areas · Licensed &amp; Insured</p>
           <div className="flex items-center gap-3">
             <a href={PHONE_HREF} className="font-bold text-stone hover:text-cream transition-colors">{PHONE}</a>
@@ -175,7 +175,7 @@ export default function Home() {
 
       {/* ── NAV ── */}
       <nav className="sticky top-0 z-50 bg-pink shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 flex items-center justify-between gap-4">
+        <div className="max-w-6xl mx-auto px-4 sm:px-8 py-3 sm:py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <img src="/StillPaintingRealLogo.png" alt="Still Painting Co. Logo" className="h-10 w-10 object-contain rounded-lg" />
             <span className="font-display text-xl sm:text-2xl font-bold text-stone leading-tight">
@@ -200,13 +200,46 @@ export default function Home() {
         </div>
       </nav>
 
+      {/* ── MOBILE CONTACT BAR ── */}
+      <div className="sm:hidden bg-forest-dark text-stone/80 text-sm py-2 px-4 flex items-center justify-center gap-4">
+        <a href={PHONE_HREF} className="font-bold text-stone">{PHONE}</a>
+        <span className="text-stone/30">·</span>
+        <a href={SMS_HREF} className="font-semibold text-stone/70">Text Us</a>
+      </div>
+
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
-        <svg className="absolute top-12 right-[-1rem] w-80 h-16 text-stone/10 pointer-events-none" viewBox="0 0 400 80" fill="currentColor" aria-hidden="true">
-          <path d="M8,40 Q80,12 180,28 Q280,44 392,18 C398,26 398,38 392,48 Q280,70 180,54 Q80,70 8,40Z"/>
+        {/* Paint drips top */}
+        <svg className="absolute top-0 left-0 right-0 w-full pointer-events-none" viewBox="0 0 800 120" fill="none" aria-hidden="true">
+          <path d="M60,0 L60,55 Q60,72 50,80 Q40,88 40,100 Q40,115 50,118 Q60,121 60,108 Q60,95 70,88 Q80,80 80,55 L80,0Z" fill="currentColor" className="text-stone/10"/>
+          <path d="M160,0 L160,40 Q160,55 150,62 Q140,70 142,82 Q144,92 152,93 Q160,94 158,83 Q156,72 166,65 Q176,58 176,40 L176,0Z" fill="currentColor" className="text-stone/8"/>
+          <path d="M320,0 L320,65 Q320,82 310,90 Q300,98 302,112 Q304,122 314,122 Q324,122 322,110 Q320,98 330,90 Q340,82 340,65 L340,0Z" fill="currentColor" className="text-slate/20"/>
+          <path d="M500,0 L500,45 Q500,58 492,65 Q484,72 486,82 Q488,90 496,90 Q504,90 502,82 Q500,72 508,65 Q516,58 516,45 L516,0Z" fill="currentColor" className="text-stone/10"/>
+          <path d="M650,0 L650,70 Q650,88 640,96 Q630,104 632,118 Q634,128 644,128 Q654,128 652,116 Q650,104 660,96 Q670,88 670,70 L670,0Z" fill="currentColor" className="text-slate/15"/>
+          <path d="M760,0 L760,50 Q760,64 752,70 Q744,76 746,86 Q748,94 756,94 Q764,94 762,86 Q760,76 768,70 Q776,64 776,50 L776,0Z" fill="currentColor" className="text-stone/8"/>
         </svg>
-        <svg className="absolute bottom-24 left-[-1rem] w-72 h-14 text-stone/10 pointer-events-none" viewBox="0 0 360 60" fill="currentColor" aria-hidden="true">
-          <path d="M6,30 Q70,8 180,22 Q280,36 354,12 C358,20 358,32 354,42 Q280,56 180,42 Q70,56 6,30Z"/>
+
+        {/* Paint splatter left */}
+        <svg className="absolute bottom-20 left-4 w-40 h-40 pointer-events-none opacity-10" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <circle cx="50" cy="50" r="18"/>
+          <circle cx="22" cy="38" r="7"/>
+          <circle cx="72" cy="28" r="5"/>
+          <circle cx="30" cy="68" r="9"/>
+          <circle cx="68" cy="65" r="6"/>
+          <circle cx="80" cy="45" r="4"/>
+          <circle cx="15" cy="55" r="4"/>
+          <circle cx="55" cy="18" r="5"/>
+        </svg>
+
+        {/* Paint splatter right */}
+        <svg className="absolute top-20 right-4 w-32 h-32 pointer-events-none opacity-10" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
+          <circle cx="50" cy="50" r="14"/>
+          <circle cx="25" cy="42" r="6"/>
+          <circle cx="70" cy="30" r="4"/>
+          <circle cx="35" cy="72" r="7"/>
+          <circle cx="72" cy="68" r="5"/>
+          <circle cx="82" cy="48" r="3"/>
+          <circle cx="18" cy="62" r="3"/>
         </svg>
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-16 sm:py-40 text-center">
