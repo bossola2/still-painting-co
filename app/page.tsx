@@ -1,4 +1,5 @@
 import QuoteForm from "./components/QuoteForm";
+import NavMenu from "./components/NavMenu";
 
 const PHONE = "(804) 928-7714";
 const PHONE_HREF = "tel:+18049287714";
@@ -128,6 +129,7 @@ export default function Home() {
             >
               {EMAIL}
             </a>
+            <NavMenu />
           </div>
         </div>
       </nav>

@@ -16,9 +16,29 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Still Painting Co.",
+  title: "Still Painting Co. | Burlington, VT Painters",
   description:
-    "Local Burlington, VT interior and exterior painters. Houses, decks, fences & staining. Free quotes. Hardworking college students who take pride in every coat.",
+    "Still Painting Co. offers interior and exterior painting, deck refinishing, fence painting, and wood staining in Burlington, VT and surrounding areas. Free quotes. Local UVM students who take pride in every job.",
+  keywords: [
+    "painters Burlington VT",
+    "exterior painting Burlington Vermont",
+    "interior painting Burlington VT",
+    "deck refinishing Vermont",
+    "fence painting Burlington",
+    "wood staining Vermont",
+    "house painting Colchester VT",
+    "affordable painters Vermont",
+    "local painters Burlington",
+  ],
+  openGraph: {
+    title: "Still Painting Co. | Burlington, VT Painters",
+    description:
+      "Local Burlington, VT painters offering interior & exterior painting, deck refinishing, fence painting and more. Free quotes.",
+    url: "https://stillpaintingco.com",
+    siteName: "Still Painting Co.",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
