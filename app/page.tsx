@@ -162,10 +162,11 @@ export default function Home() {
   return (
     <div className="min-h-screen">
 
-      {/* ── TOP BAR — desktop only ── */}
-      <div className="hidden sm:block bg-forest-dark text-stone/80 text-sm py-2 px-8">
+      {/* ── TOP BAR ── */}
+      <div className="bg-forest-dark text-stone/80 text-sm py-2 px-4 sm:px-8">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <p className="font-semibold">Burlington, VT &amp; Surrounding Areas · Licensed &amp; Insured</p>
+          <p className="hidden sm:block font-semibold">Burlington, VT &amp; Surrounding Areas · Licensed &amp; Insured</p>
+          <p className="sm:hidden font-semibold text-xs">Burlington, VT · Licensed &amp; Insured</p>
           <div className="flex items-center gap-3">
             <a href={PHONE_HREF} className="font-bold text-stone hover:text-cream transition-colors">{PHONE}</a>
             <a href={SMS_HREF} className="text-stone/70 hover:text-stone transition-colors text-xs font-semibold">(text us!)</a>
@@ -199,13 +200,6 @@ export default function Home() {
           </div>
         </div>
       </nav>
-
-      {/* ── MOBILE CONTACT BAR ── */}
-      <div className="sm:hidden bg-forest-dark text-stone/80 text-sm py-2 px-4 flex items-center justify-center gap-4">
-        <a href={PHONE_HREF} className="font-bold text-stone">{PHONE}</a>
-        <span className="text-stone/30">·</span>
-        <a href={SMS_HREF} className="font-semibold text-stone/70">Text Us</a>
-      </div>
 
       {/* ── HERO ── */}
       <section className="relative bg-forest-dark text-cream overflow-hidden">
