@@ -64,8 +64,8 @@ const faqs = [
     a: "Yes, always. We'll come take a look at the job and give you a straight quote with no obligation.",
   },
   {
-    q: "Are you licensed and insured?",
-    a: "Yes, we are fully licensed and insured. You can hire us with confidence.",
+    q: "Are you insured?",
+    a: "Yes, we are fully insured. You can hire us with confidence.",
   },
   {
     q: "What areas do you serve?",
