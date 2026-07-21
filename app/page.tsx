@@ -1,5 +1,6 @@
 import QuoteForm from "./components/QuoteForm";
 import NavMenu from "./components/NavMenu";
+import Gallery from "./components/Gallery";
 
 const PHONE = "(804) 928-7714";
 const PHONE_HREF = "tel:+18049287714";
@@ -369,42 +370,7 @@ export default function Home() {
             <div className="w-16 h-1.5 bg-stone/50 rounded-full mx-auto mb-5" />
             <p className="text-lg sm:text-xl text-stone/70">See what a fresh coat can do.</p>
           </div>
-          <div className="rounded-2xl overflow-hidden shadow-lg bg-stone mb-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2">
-              <div className="sm:border-r-2 border-b-2 sm:border-b-0 border-stone">
-                <div className="relative h-52 sm:h-56 overflow-hidden border-b-2 border-stone">
-                  <img src="/porch1before.JPEG" alt="Before: Porch Refinish" className="w-full h-full object-contain object-center bg-charcoal/10" />
-                </div>
-                <div className="relative h-52 sm:h-56 overflow-hidden">
-                  <img src="/porch2before.jpeg" alt="Before: Porch Refinish" className="w-full h-full object-cover" />
-                </div>
-                <div className="bg-charcoal/75 py-2.5 text-center">
-                  <span className="text-stone-light text-sm font-bold tracking-wide uppercase">Before</span>
-                </div>
-              </div>
-              <div>
-                <div className="relative h-52 sm:h-56 overflow-hidden border-b-2 border-stone">
-                  <img src="/porch1after.jpeg" alt="After: Porch Refinish" className="w-full h-full object-cover" />
-                </div>
-                <div className="relative h-52 sm:h-56 overflow-hidden">
-                  <img src="/porch2after.jpeg" alt="After: Porch Refinish" className="w-full h-full object-cover" />
-                </div>
-                <div className="bg-slate py-2.5 text-center">
-                  <span className="text-white text-sm font-bold tracking-wide uppercase">After</span>
-                </div>
-              </div>
-            </div>
-            <div className="px-5 py-4 border-t-2 border-cream flex items-center justify-between">
-              <div>
-                <p className="font-display font-semibold text-forest-dark text-xl">Porch Refinish</p>
-                <p className="text-sm text-charcoal/55">Colchester, VT</p>
-              </div>
-              <span className="bg-forest text-stone-light text-xs font-bold px-3 py-1.5 rounded-full uppercase tracking-wide">Featured</span>
-            </div>
-          </div>
-          <p className="text-center text-stone/60 mt-8 text-base italic">
-            More photos added after every job — check back soon!
-          </p>
+          <Gallery />
         </div>
       </section>
 
