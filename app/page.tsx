@@ -169,7 +169,7 @@ export default function Home() {
           <p className="sm:hidden font-semibold text-xs">Burlington, VT · Licensed &amp; Insured</p>
           <div className="flex items-center gap-2 shrink-0">
             <a href={PHONE_HREF} className="font-bold text-stone hover:text-cream transition-colors whitespace-nowrap">{PHONE}</a>
-            <a href={SMS_HREF} className="text-stone/70 hover:text-stone transition-colors text-xs font-semibold whitespace-nowrap">(text us!)</a>
+            <a href={SMS_HREF} className="text-stone/70 hover:text-stone transition-colors text-xs font-semibold whitespace-nowrap"> (text us!)</a>
           </div>
         </div>
       </div>
