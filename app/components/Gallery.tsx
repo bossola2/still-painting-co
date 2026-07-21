@@ -11,10 +11,22 @@ const projects = [
   {
     title: "Porch Refinish",
     location: "Burlington, VT",
-    before: ["/kami_before1.png"],
+    before: ["/kami_before 1.PNG"],
     after: ["/kami_after1.jpeg", "/kami_after2.jpeg"],
   },
 ];
+
+function PhotoStrip({ srcs, alt }: { srcs: string[]; alt: string }) {
+  return (
+    <div className="flex sm:flex-col h-full">
+      {srcs.map((src, i) => (
+        <div key={i} className="relative overflow-hidden flex-1 border-b-2 sm:border-b-2 border-r-2 sm:border-r-0 last:border-r-0 border-stone">
+          <img src={src} alt={`${alt} ${i + 1}`} className="w-full h-full object-cover object-center" />
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function Gallery() {
   const [current, setCurrent] = useState(0);
@@ -22,18 +34,13 @@ export default function Gallery() {
 
   return (
     <div>
-
       {/* Before / After grid */}
       <div className="rounded-2xl overflow-hidden shadow-lg bg-stone">
         <div className="grid grid-cols-1 sm:grid-cols-2">
           {/* Before */}
           <div className="sm:border-r-2 border-b-2 sm:border-b-0 border-stone">
-            <div className={`grid ${project.before.length > 1 ? "grid-rows-2" : "grid-rows-1"}`}>
-              {project.before.map((src, i) => (
-                <div key={i} className="relative overflow-hidden border-b-2 border-stone h-64 sm:h-72">
-                  <img src={src} alt={`Before: ${project.title}`} className="w-full h-full object-cover object-center" />
-                </div>
-              ))}
+            <div className="h-72 sm:h-96">
+              <PhotoStrip srcs={project.before} alt={`Before: ${project.title}`} />
             </div>
             <div className="bg-charcoal/75 py-2.5 text-center">
               <span className="text-stone-light text-sm font-bold tracking-wide uppercase">Before</span>
@@ -42,12 +49,8 @@ export default function Gallery() {
 
           {/* After */}
           <div>
-            <div className={`grid ${project.after.length > 1 ? "grid-rows-2" : "grid-rows-1"}`}>
-              {project.after.map((src, i) => (
-                <div key={i} className="relative overflow-hidden border-b-2 border-stone h-64 sm:h-72">
-                  <img src={src} alt={`After: ${project.title}`} className="w-full h-full object-cover object-center" />
-                </div>
-              ))}
+            <div className="h-72 sm:h-96">
+              <PhotoStrip srcs={project.after} alt={`After: ${project.title}`} />
             </div>
             <div className="bg-slate py-2.5 text-center">
               <span className="text-white text-sm font-bold tracking-wide uppercase">After</span>
