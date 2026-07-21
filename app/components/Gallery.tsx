@@ -9,9 +9,9 @@ const projects = [
     after: ["/porch1after.jpeg", "/porch2after.jpeg"],
   },
   {
-    title: "Exterior Painting",
+    title: "Porch Refinish",
     location: "Burlington, VT",
-    before: ["/kami_before1.jpeg"],
+    before: ["/kami_before1.png"],
     after: ["/kami_after1.jpeg", "/kami_after2.jpeg"],
   },
 ];
@@ -22,22 +22,6 @@ export default function Gallery() {
 
   return (
     <div>
-      {/* Project tabs */}
-      <div className="flex justify-center gap-3 mb-8">
-        {projects.map((p, i) => (
-          <button
-            key={p.title}
-            onClick={() => setCurrent(i)}
-            className={`px-5 py-2 rounded-full font-semibold text-sm transition-all ${
-              current === i
-                ? "bg-slate text-white shadow-md"
-                : "bg-stone/30 text-stone/70 hover:bg-stone/50"
-            }`}
-          >
-            {p.title}
-          </button>
-        ))}
-      </div>
 
       {/* Before / After grid */}
       <div className="rounded-2xl overflow-hidden shadow-lg bg-stone">
@@ -46,8 +30,8 @@ export default function Gallery() {
           <div className="sm:border-r-2 border-b-2 sm:border-b-0 border-stone">
             <div className={`grid ${project.before.length > 1 ? "grid-rows-2" : "grid-rows-1"}`}>
               {project.before.map((src, i) => (
-                <div key={i} className={`relative overflow-hidden border-b-2 border-stone ${project.before.length > 1 ? "h-52 sm:h-56" : "h-72 sm:h-96"}`}>
-                  <img src={src} alt={`Before: ${project.title}`} className="w-full h-full object-cover" />
+                <div key={i} className="relative overflow-hidden border-b-2 border-stone h-64 sm:h-72">
+                  <img src={src} alt={`Before: ${project.title}`} className="w-full h-full object-cover object-center" />
                 </div>
               ))}
             </div>
@@ -60,8 +44,8 @@ export default function Gallery() {
           <div>
             <div className={`grid ${project.after.length > 1 ? "grid-rows-2" : "grid-rows-1"}`}>
               {project.after.map((src, i) => (
-                <div key={i} className={`relative overflow-hidden border-b-2 border-stone ${project.after.length > 1 ? "h-52 sm:h-56" : "h-72 sm:h-96"}`}>
-                  <img src={src} alt={`After: ${project.title}`} className="w-full h-full object-cover" />
+                <div key={i} className="relative overflow-hidden border-b-2 border-stone h-64 sm:h-72">
+                  <img src={src} alt={`After: ${project.title}`} className="w-full h-full object-cover object-center" />
                 </div>
               ))}
             </div>
