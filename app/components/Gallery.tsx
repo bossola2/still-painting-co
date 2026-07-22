@@ -12,7 +12,7 @@ const projects = [
     title: "Porch Refinish",
     location: "Burlington, VT",
     before: ["/kami_before 1.PNG"],
-    after: ["/kami_after1.jpeg", "/kami_after2.jpeg"],
+    after: ["/kami_after1.jpeg"],
   },
 ];
 
