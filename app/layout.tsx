@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Caveat, Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const caveat = Caveat({
@@ -46,7 +47,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={`${caveat.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" async />
+      </body>
     </html>
   );
 }
