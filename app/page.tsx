@@ -438,7 +438,18 @@ export default function Home() {
               </span>
             ))}
           </div>
-          <p className="text-stone/50 mt-8 text-sm">Don&apos;t see your town? Shoot us a text — we may still be able to help.</p>
+          <p className="text-stone/50 mt-8 text-sm mb-10">Don&apos;t see your town? Shoot us a text — we may still be able to help.</p>
+          <div className="rounded-2xl overflow-hidden shadow-lg border border-stone/20">
+            <iframe
+              title="Still Painting Co. service area map"
+              src="https://www.google.com/maps?q=Burlington,Vermont&z=10&output=embed"
+              width="100%"
+              height="360"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </section>
 
