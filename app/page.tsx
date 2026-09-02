@@ -444,7 +444,7 @@ export default function Home() {
               title="Still Painting Co. service area map"
               src="https://www.google.com/maps/d/u/0/embed?mid=1cih54vC7tJt4rj1ZO9dru2jpfc7_56Q&ehbc=2E312F&noprof=1"
               width="100%"
-              height="360"
+              height="520"
               style={{ border: 0 }}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
