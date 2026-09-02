@@ -88,7 +88,7 @@ const faqs = [
 
 const serviceAreas = [
   "Burlington", "Colchester", "South Burlington", "Shelburne",
-  "Winooski", "Essex", "Williston",
+  "Winooski", "Essex", "Essex Junction", "Williston",
 ];
 
 function ServiceIcon({ id }: { id: string }) {
