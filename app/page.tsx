@@ -499,7 +499,6 @@ export default function Home() {
                 </svg>
                 {EMAIL}
               </a>
-              <p className="text-cream/40 text-sm mt-2">Mon – Sat, 8 am – 6 pm</p>
             </div>
             <div>
               <p className="font-bold text-stone mb-3 uppercase tracking-wide text-sm">Service Areas</p>
