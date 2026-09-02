@@ -463,8 +463,8 @@ export default function Home() {
             </h2>
             <div className="w-16 h-1.5 bg-slate rounded-full mx-auto mb-5" />
             <p className="text-lg sm:text-xl text-stone/70 mb-3">
-              Fill out the form below and we&apos;ll get back to you fast. Or call us at{" "}
-              <a href={PHONE_HREF} className="text-slate-light underline underline-offset-2 hover:text-stone transition-colors">
+              Fill out the form below and we&apos;ll get back to you fast. Or text us at{" "}
+              <a href={SMS_HREF} className="text-slate-light underline underline-offset-2 hover:text-stone transition-colors">
                 {PHONE}
               </a>
             </p>
